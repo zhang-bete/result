@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>闪电按钮</title>
+
+    <style>
+        /* 设置整个网页 */
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f2f2f2;
+            font-family: Arial, sans-serif;
+        }
+
+/*页面内容容器*/
+.container{text-align:center;}
+        /* 闪电按钮 */
+        .lightning-button {
+            padding: 18px 35px;
+            border: none;
+            border-radius: 15px;
+            background-color: #ffd43b;
+            color: #333;
+            font-size: 22px;
+            font-weight: bold;
+            cursor: pointer;
+
+            /* 立体阴影 */
+            box-shadow: 0 8px 0 #c9a900,
+                        0 12px 20px rgba(0, 0, 0, 0.2);
+
+            /* 动画 */
+            transition: all 0.15s ease;
+        }
+
+        /* 鼠标移动到按钮上 */
+        .lightning-button:hover {
+            background-color: #ffe66d;
+            transform: translateY(-3px);
+
+            box-shadow: 0 11px 0 #c9a900,
+                        0 16px 25px rgba(0, 0, 0, 0.25);
+        }
+
+        /* 鼠标按下按钮 */
+        .lightning-button:active {
+            transform: translateY(5px);
+
+            box-shadow: 0 3px 0 #c9a900,
+                        0 6px 10px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+
+<body>
+<h1>我的闪电按钮</h1>
+<p>点击按钮，开始充能！</p>
+
+    <button class="lightning-button" onclick="charge()">
+        ⚡ 点击充能
+    </button>
+
+    <script>
+        function charge() {
+            alert("⚡ 充能成功！");
+        }
+    </script>
+
+</body>
+</html>
